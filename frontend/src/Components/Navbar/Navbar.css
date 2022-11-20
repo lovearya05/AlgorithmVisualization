@@ -1,0 +1,27 @@
+.navbar{
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3B41D2;
+}
+.upper__navbar{
+    margin-right:100px;
+}
+.middle__navbar .navigation .nav__link{
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px  25px;
+}
+.down__navbar{
+    margin-right: 70px;
+}
+.down__navbar .nav__link{
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px;
+}
