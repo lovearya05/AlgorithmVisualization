@@ -1,0 +1,42 @@
+.algo__btn{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 25px;
+}
+.name__algo h3{
+    text-align: center;
+    padding: 6px;
+    /* border-top: 2px solid grey; */
+}
+.algo__box{
+    width: 280px;
+    margin: 15px 10px;
+    height: 200px;
+    background-color: #EFEFEF;
+    /* border: 1px solid grey; */
+
+    overflow: hidden;
+}
+.image__algo img{
+    width: 100%;
+    height: 160px;
+}
+.search{
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+}
+.search input{
+    width: 60%;
+    margin: 30px 0px 50px  0px;
+    border-radius: 50px;
+    font-weight: bold;
+    padding: 15px 15px;
+    border: none;
+    background-color: #EFEFEF;
+}
+.search input:focus{
+    outline:none;
+}

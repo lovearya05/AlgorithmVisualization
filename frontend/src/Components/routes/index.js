@@ -5,7 +5,9 @@ import Login from '../Login/Login'
 import Profile from '../Profile/Profile'
 import Signup from '../Signup/Signup'
 import SinglyLinkList from "../algorithms/SinglyLinkLIst"
-
+import Sorting from "../Sorting/visualizer"
+import Queue from "../DSComponents/Queue/Queue"
+import Stack from "../DSComponents/Stack/Stack"
 
 export default function RoutesServer(){
     return (
@@ -15,6 +17,10 @@ export default function RoutesServer(){
         <Route exact path='/signup' element={< Signup />}></Route>
         <Route exact path='/profile' element={< Profile />}></Route>
         <Route  path='/singlylinklist' element={< SinglyLinkList/>}></Route>
+        <Route  path='/singlylinklist' element={< SinglyLinkList/>}></Route>
+        <Route  path='/stack' element={< Stack/>}></Route>
+        <Route  path='/queue' element={< Queue/>}></Route>
+        <Route  path='/tree' element={< Sorting/>}></Route>
     </Routes>   
     )
 }

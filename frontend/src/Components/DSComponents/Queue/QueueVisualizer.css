@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+div.MainContainer {
+  /* border-style: solid; */
+  height: 900px;
+  width: 100%;
+}
+
+div.visualizingContainer {
+  position: absolute;
+  transition: 0.5s ease;
+  top: 58%;
+  left: 03%;
+}
+
+div.InputContainer {
+  display: table;
+}
+
+.SizeChildContainer {
+  position: absolute;
+  transition: 0.5s ease;
+  top: 8%;
+  left: 03%;
+}
+
+.NumberChildContainer {
+  position: absolute;
+  transition: 0.5s ease;
+  top: 9%;
+  left: 39%;
+}
+
+.RemoveChildContainer {
+  position: absolute;
+  transition: 0.5s ease;
+  top: 9%;
+  left: 70%;
+}
+
+.TopLabelContainer {
+  position: absolute;
+  transition: 0.5s ease;
+  top: 35%;
+  left: 2%;
+}
+
+#size {
+  height: 35px;
+  border: 1px solid #1b2a44;
+  border-radius: 50px;
+  padding: 10px 15px;
+  margin-right: 12px;
+  width: 150px;
+  font-size: 18px;
+  
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#number {
+  height: 35px;
+  border: 1px solid #1b2a44;
+  border-radius: 50px;
+  padding: 10px 15px;
+  
+  margin-right: 12px;
+  width: 150px;
+  font-size: 18px;
+}
+
+#Sbtn {
+  /* height: 35px; */
+  width: fit-content;
+  font-size: 15pt;
+  cursor: pointer;
+  
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#popBtn {
+   /* height: 50px;  */
+   width: 110px;
+  font-size: 15pt;
+  cursor: pointer;
+  position: absolute;
+  transition: 0.5s ease;
+  top: 95%;
+  left: 20%;
+  /* box-shadow:
+          0 0 10px 10px rgb(0, 195, 255), 
+          0 0 30px 20px rgb(0, 204, 255),
+          0 0 50px 30px rgba(0, 247, 255, 0.849);  */
+}
+
+#Arrow {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  transition: 0.5s ease;
+  top: 130%;
+  left: 30%;
+}
+
+td {
+  /* border: solid black; */
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+}
+
+#frontDisplay {
+  position: absolute;
+  top: 38%;
+  left: 5%;
+}
+
+#endDisplay {
+  position: absolute;
+  top: 38%;
+  left: 25%;
+}
+
+
+#frontCaption {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+}
+
+#endCaption {
+  position: absolute;
+  top: 35%;
+  left: 25%;
+}
+.form__queue{
+  display: flex;
+  flex-direction: row;
+  
+}
+h5{
+  font-family: 'Poppins', sans-serif;
+}
+.form__queue input{
+  padding: 15px 15px;
+
+  border: 1px solid grey;
+  border-radius: 50px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.form__queue input:focus{
+  border:2px solid #1b2a44;    
+    outline:none;
+  /* border: 1px solid grey; */
+}
+
+.form__queue button{
+  width: fit-content;
+  font-size: 18px;
+  
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ /* background-color: grey; */
+}
