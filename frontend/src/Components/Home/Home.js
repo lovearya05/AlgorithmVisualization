@@ -10,10 +10,19 @@ import tree from "./Images/tree.png"
 import graph from "./Images/graph.png"
 import hashmap from "./Images/hashmap.png"
 import linkList from "./Images/linkList.png"
-
+import {auth} from "../../firebase"
+import {signOut } from "firebase/auth"
 import "./Home.css"
+import { useNavigate } from "react-router-dom";
 function Home(props) {
 
+  const navigate  =  useNavigate()
+  const logout = () => {
+    signOut(auth)
+    .then(() =>{
+      navigate("/login")
+    })
+  };
 
   return (
     <div>
@@ -35,6 +44,7 @@ function Home(props) {
         <BoxComponent algo="Array" image={array} color="#C565FF" />
         <BoxComponent algo="Greedy" image={greedy} color="#D1DD45" />
       </div>
+      <button onClick={logout}>Signout</button>
     </div>
   );
 }
