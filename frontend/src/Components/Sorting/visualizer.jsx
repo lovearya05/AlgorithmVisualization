@@ -19,6 +19,8 @@ import pause from './helper/pause';
 import generator from './helper/generator';
 import {ALGORITHM, SPEED, SIZE, SWAP, CURRENT, NORMAL, DONE} from './helper/constants';
 import { getKeysCopy } from './helper/keys.js';
+import NavbarCom from "../Navbar/Navbar"
+
 
 class Visualizer extends React.Component {
     /*  each element in the list contains a <key, classType> where:
@@ -49,8 +51,9 @@ class Visualizer extends React.Component {
 
 
         return (
+    
             <React.Fragment>
-                
+                    <NavbarCom />
                 <Frame 
                     list = {this.state.list}
                 />

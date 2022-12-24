@@ -19,7 +19,7 @@ const Navbar = () => {
             </div>
        </div>
         <div className='down__navbar'>
-            <Link to="profile" className='nav__link' >Profile</Link>
+            <Link to="/profile" className='nav__link' >Profile</Link>
         </div>
     </div>
   )
