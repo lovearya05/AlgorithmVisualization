@@ -5,6 +5,7 @@ import SingleLinkListViewer from "./SinglyLinkListViewer";
 import SinglyList from "../../Components/utils/singlyLinkedListAlgo";
 import AddInputButton from "../AddInputButton";
 // This for snackbar
+import Navbar from "../Navbar/Navbar"
 // import { useSnackbar } from "notistack";
 
 const singlyList = new SinglyList();
@@ -75,6 +76,9 @@ const SinglyLinkList = () => {
 	};
 
 	return (
+		<>
+		<Navbar />
+		
 		<div>
 			<h2
 				style={{
@@ -124,6 +128,7 @@ const SinglyLinkList = () => {
 				</div>
 			</div>
 		</div>
+		</>
 	);
 };
 

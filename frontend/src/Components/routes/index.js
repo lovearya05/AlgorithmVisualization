@@ -17,10 +17,11 @@ export default function RoutesServer(){
         <Route exact path='/signup' element={< Signup />}></Route>
         <Route exact path='/profile' element={< Profile />}></Route>
         <Route  path='/singlylinklist' element={< SinglyLinkList/>}></Route>
-        <Route  path='/singlylinklist' element={< SinglyLinkList/>}></Route>
+        {/* <Route  path='/singlylinklist' element={< SinglyLinkList/>}></Route> */}
+        <Route  path='/sorting' element={< Sorting/>}></Route>
         <Route  path='/stack' element={< Stack/>}></Route>
         <Route  path='/queue' element={< Queue/>}></Route>
-        <Route  path='/tree' element={< Sorting/>}></Route>
+        {/* <Route  path='/binarySearch' element={< BinarySearch/>}></Route> */}
     </Routes>   
     )
 }

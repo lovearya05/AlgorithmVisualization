@@ -8,20 +8,39 @@ import { signInWithEmailAndPassword} from "firebase/auth"
 
 const Login = () => {
 
-  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
-  const logInWithEmailAndPassword = async (email, password) => {
-    try {
-      await signInWithEmailAndPassword(auth, email, password)
-      .then(() =>{
-        navigate("/")
-      })
-    } catch (err) {
-      console.error(err);
-      alert(err.message);
+  const navigate = useNavigate();
+
+
+  // const logInWithEmailAndPassword = async (email, password) => {
+  //   try {
+  //     await signInWithEmailAndPassword(auth, email, password)
+  //     .then(() =>{
+  //       // navigate("/")
+  //     })
+  //   } catch (err) {
+  //     console.error(err);
+  //     alert(err.message);
+  //   }
+  // };
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if(!email || !password){
+        setErrorMsg("Fill all fields");
+
+    }else{
+      function onRegister() {
+        signInWithEmailAndPassword(auth, email, password).catch((error) =>
+          console.log(error)
+        );
+        navigate("/");
+      }
+      onRegister();
     }
+    
   };
 
  
@@ -35,7 +54,7 @@ const Login = () => {
         </div>
       </div>
       <div className='login__right'>
-        {/* <form> */}
+        <form onSubmit={handleSubmit}>
         <div className='login__right__center'>
             <h2>Hello Again!</h2>
          </div>
@@ -52,11 +71,12 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
            placeholder='Enter your name.....' />
             </div>
+            <b style={{fontWeight:" bold", fontFamily: 'Poppins', fontSize: "0.875rem",  color: "#ff3300",textAlign:"center"}}>{errorMsg}</b>
             <div style={{display:'flex',justifyContent:"center"}}>
-                <button className='submit__btn' onClick={() => logInWithEmailAndPassword(email, password)}>Login</button>
+                <button className='submit__btn'>Login</button>
             </div>
          </div>
-        {/* </form> */}
+        </form>
         <div style={{display:'flex',justifyContent:"space-around",padding:"0px 100px", alignContent:'center'}}>
             <h3 style={{marginRight:"15px"}} className="already__account">Dont have’n account?</h3>
             <Link to="/signup" className='login__account' >Signup</Link>

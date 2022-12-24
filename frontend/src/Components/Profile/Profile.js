@@ -2,12 +2,16 @@ import React from 'react'
 import Timeline from './HeatMap/Timeline'
 import "./Profile.css"
 import moment from "moment"
+import Navbar from "../Navbar/Navbar"
+
 
 const Profile = () => {
 
   let daterange = [moment().add(365, 'days'), moment()];
 
   return (
+    <>
+    <Navbar />
     <div className="profile">
       <div className='leftSide'>
         <h2>Helo</h2>
@@ -59,6 +63,7 @@ const Profile = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

@@ -20,24 +20,46 @@ const Signup = () => {
   const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
-  const registerWithEmailAndPassword = async (name, email, password) => {
-    if (!values.name || !values.email || !values.password) {
-          setErrorMsg("Fill all fields");
-          return;
-      }
-    try {
-      const res = await createUserWithEmailAndPassword(auth, email, password);
-      // const user = res.user;
-      // await addDoc(collection(db, "users"), {
-      //   uid: user.uid,
-      //   name,
-      //   authProvider: "local",
-      //   email,
-      // });
-    } catch (err) {
-      console.error(err);
-      alert(err.message);
+  // const registerWithEmailAndPassword = async (name, email, password) => {
+  //   if (!values.name || !values.email || !values.password) {
+  //         setErrorMsg("Fill all fields");
+  //         return;
+  //     }
+  //   try {
+  //     const res = await createUserWithEmailAndPassword(auth, email, password);
+  //     // const user = res.user;
+  //     // await addDoc(collection(db, "users"), {
+  //     //   uid: user.uid,
+  //     //   name,
+  //     //   authProvider: "local",
+  //     //   email,
+  //     // });
+  //   } catch (err) {
+  //     console.error(err);
+  //     alert(err.message);
+  //   }
+  // };
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if(!values.name || !values.email || !values.password){
+      setErrorMsg("Fill all fields");
+    }else{
+    function onRegister() {
+      createUserWithEmailAndPassword(auth,values.email, values.password)
+        .then((userCredential) => {
+          // set(ref(db, "users/" + userCredential.user.uid), {
+          //   firstName: firstName,
+          //   lastName: lastName,
+          //   email: email,
+          // });
+
+        })
+        .catch((error) => console.log(error));
+      navigate("/");
     }
+    onRegister();
+    } 
   };
 
   // const handleSubmission = () => {
@@ -69,7 +91,7 @@ const Signup = () => {
         </div>
       </div>
       <div className='signup__right'>
-        {/* <form> */}
+        <form onSubmit={handleSubmit}>
         <div className='signup__right__center'>
             <h2>Welcome!</h2>
          </div>
@@ -88,10 +110,10 @@ const Signup = () => {
             </div>
             <b style={{fontWeight:" bold", fontFamily: 'Poppins', fontSize: "0.875rem",  color: "#ff3300",textAlign:"center"}}>{errorMsg}</b>
             <div style={{display:'flex',justifyContent:"center"}}>
-                <button className='submit__btn_signup' onClick={registerWithEmailAndPassword} disabled={submitButtonDisabled}>Signup</button>
+                <button className='submit__btn_signup' disabled={submitButtonDisabled}>Signup</button>
             </div>
          </div>
-        {/* </form> */}
+        </form>
         <div style={{display:'flex',justifyContent:"space-around",padding:"0px 100px", alignContent:'center'}}>
             <h3 style={{marginRight:"15px"}} className="signup_already__account">Already have’n account?</h3>
             <Link to="/login" className='signup__account' >Login</Link>
