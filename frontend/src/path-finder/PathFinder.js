@@ -74,7 +74,8 @@ const PathFinder = () => {
         }
         setNotified(true)
         setMainGrid(createInitialGrid())
-    }, [])
+    }, [COLS])
+
     const [width] = useWindowSize()
     if (width < 500 && COLS !== 15) {
         SET_COLS(15)
@@ -359,8 +360,8 @@ const PathFinder = () => {
                     })}>Start Timer</button>
                 </div>
                 <div className="pathFinder__types">
-                    <button className={currentAlgo === 'aStar' ? 'pathFinder__button-active' : null} onClick={() => getAnimateArray('aStar')}> A-star</button>
-                    <button className={currentAlgo === 'dijkstra' ? 'pathFinder__button-active' : null} onClick={() => getAnimateArray('dijkstra')}>Dijkstra </button>
+                    {/* <button className={currentAlgo === 'aStar' ? 'pathFinder__button-active' : null} onClick={() => getAnimateArray('aStar')}> A-star</button> */}
+                    {/* <button className={currentAlgo === 'dijkstra' ? 'pathFinder__button-active' : null} onClick={() => getAnimateArray('dijkstra')}>Dijkstra </button> */}
                     <button className={currentAlgo === 'DFS' ? 'pathFinder__button-active' : null} onClick={() => getAnimateArray('DFS')}>DFS</button>
                     <button className={currentAlgo === 'BFS' ? 'pathFinder__button-active' : null} onClick={() => getAnimateArray('BFS')}>BFS</button>
                 </div>
@@ -382,14 +383,14 @@ const PathFinder = () => {
                     }
                 </div>
                 <div className="indicators">
-                    <div className="start">
+                    {/* <div className="start">
                         <i class="fas fa-car mr-2"></i>
                         <strong>Start Node</strong>
                     </div>
                     <div className="end">
                         <i class="fas fa-flag-checkered mr-2"></i>
                         <strong>End Node</strong>
-                    </div>
+                    </div> */}
 
                     <div className="wall">
                         <div className="wall__icon"></div>

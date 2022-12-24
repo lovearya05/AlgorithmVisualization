@@ -1,0 +1,105 @@
+div.MainContainer {
+  /* border-style: solid; */
+  height: 900px;
+  width: 100%;
+}
+
+div.visualizingContainer {
+  position: absolute;
+  transition: 0.5s ease;
+  top: 58%;
+  left: 03%;
+}
+
+div.InputContainer {
+  display: table;
+}
+
+.SizeChildContainer {
+  position: absolute;
+  transition: 0.5s ease;
+  top: 8%;
+  left: 03%;
+}
+
+.NumberChildContainer {
+  position: absolute;
+  transition: 0.5s ease;
+  top: 9%;
+  left: 39%;
+}
+
+.RemoveChildContainer {
+  position: absolute;
+  transition: 0.5s ease;
+  top: 9%;
+  left: 70%;
+}
+
+.TopLabelContainer {
+  position: absolute;
+  transition: 0.5s ease;
+  top: 35%;
+  left: 2%;
+}
+
+#size {
+  height: 35px;
+  width: 150px;
+  font-size: 20pt;
+}
+
+#number {
+  height: 35px;
+  width: 150px;
+  font-size: 20pt;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#Sbtn {
+  /* height: 25px; */
+  width: 100px;
+  font-size: 15pt;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#popBtn {
+  /* height: 30px; */
+  width: 110px;
+  font-size: 15pt;
+  cursor: pointer;
+  position: absolute;
+  transition: 0.5s ease;
+  top: 95%;
+  left: 20%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#Arrow {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  transition: 0.5s ease;
+  top: 130%;
+  left: 30%;
+}
+
+td {
+  border: solid black;
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+}
+
+#topDisplay {
+  position: absolute;
+  top: 38%;
+  left: 5%;
+}
+
+#caption {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+}

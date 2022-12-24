@@ -12,14 +12,14 @@ const Navbar = () => {
             <div className='middle__navbar'>
                 <div className='navigation'>
                     <Link to="/" className='nav__link'>Home</Link>
-                    <Link to='/' className='nav__link'>Algorithms</Link>
+                    <Link to='/singlylinklist' className='nav__link'>Algorithms</Link>
                     <Link to="/" className='nav__link'>Search</Link>
                     <Link to="/" className='nav__link'>Activity</Link>
                 </div>
             </div>
        </div>
         <div className='down__navbar'>
-            <Link to="profile" className='nav__link' >Profile</Link>
+            <Link to="/profile" className='nav__link' >Profile</Link>
         </div>
     </div>
   )
